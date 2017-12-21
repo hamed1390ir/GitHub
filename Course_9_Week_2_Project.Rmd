@@ -1,0 +1,20 @@
+---
+title: "Course_9_Project"
+author: "Hamed Yazarloo"
+date: "December 21, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE,warning = FALSE)
+```
+
+```{r}
+library(dplyr)
+library(leaflet)
+m <- leaflet() %>%
+        setView(lng = -77.0369, lat = 38.9072, zoom = 10) %>% 
+        addTiles() %>%  # Add default OpenStreetMap map tiles
+        addMarkers(lng=-77.0369, lat=38.9072, popup="Washington DC")
+m  # Print the map
+```
